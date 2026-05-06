@@ -415,6 +415,37 @@ footer a { color: var(--gold); text-decoration: none; }
   .hero-badge .star { font-size: 1.5rem; }
 }
 
+/* ─── GALLERY EXTRA ─── */
+.gallery-extra {
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px; margin-top: 16px;
+}
+.gallery-extra.open { display: grid; }
+.gallery-extra img {
+  width: 100%; aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.gallery-extra img:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+.gallery-more-wrap { text-align: center; margin-top: 32px; }
+.gallery-more-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 13px 32px;
+  background: var(--white); color: var(--charcoal);
+  border: 1.5px solid rgba(0,0,0,0.15);
+  border-radius: 30px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem; font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.gallery-more-btn:hover { background: var(--sand); box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+@media (max-width: 768px) { .gallery-extra { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 550px) { .gallery-extra { grid-template-columns: 1fr; } }
+
 /* ─── STICKY WHATSAPP (mobile only) ─── */
 @media (max-width: 768px) {
   .whatsapp-sticky { display: flex; }
@@ -547,6 +578,8 @@ footer a { color: var(--gold); text-decoration: none; }
       <img src="photos/e5a5bc87-aec1-49cc-93fc-26715129e1a7.avif" alt="Photo 8" onclick="openLightbox(7)">
       <img src="photos/e8357228-a94f-46cd-8b9f-20a14f6153a3.avif" alt="Photo 9" onclick="openLightbox(8)">
       <img src="photos/c444336f-3b06-4780-b2c6-cc8fd227ba2b.avif" alt="Photo 10" onclick="openLightbox(9)">
+    </div>
+    <div class="gallery-extra" id="gallery-extra">
       <img src="photos/aba49747-f4d4-4d9b-bf00-992de7572863.avif" alt="Photo 11" onclick="openLightbox(10)">
       <img src="photos/d07fc38c-7c14-42b5-a4ef-90f33faf294d.avif" alt="Photo 12" onclick="openLightbox(11)">
       <img src="photos/e89fede5-1416-4063-8aac-b4dc7962ea59.avif" alt="Photo 13" onclick="openLightbox(12)">
@@ -571,6 +604,11 @@ footer a { color: var(--gold); text-decoration: none; }
       <img src="photos/7dd337a5-0c26-4e8c-b31f-2fc91f6b74db.avif" alt="Photo 32" onclick="openLightbox(31)">
       <img src="photos/d8cd3b17-1080-46a9-996b-c1b96d3f9f3d.avif" alt="Photo 33" onclick="openLightbox(32)">
       <img src="photos/5383c023-1a93-4626-bb30-3a190a0cccb0.avif" alt="Photo 34" onclick="openLightbox(33)">
+    </div>
+    <div class="gallery-more-wrap">
+      <button class="gallery-more-btn" id="gallery-more-btn" onclick="toggleGallery()">
+        Voir les 24 photos restantes
+      </button>
     </div>
   </div>
 </section>
@@ -801,6 +839,13 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowLeft') navLightbox(e, -1);
   if (e.key === 'ArrowRight') navLightbox(e, 1);
 });
+
+function toggleGallery() {
+  const extra = document.getElementById('gallery-extra');
+  const btn = document.getElementById('gallery-more-btn');
+  const open = extra.classList.toggle('open');
+  btn.textContent = open ? 'Masquer les photos' : 'Voir les 24 photos restantes';
+}
 
 // Nav hide on scroll
 let lastScroll = 0;
