@@ -415,6 +415,21 @@ footer a { color: var(--gold); text-decoration: none; }
   .hero-badge .star { font-size: 1.5rem; }
 }
 
+/* ─── GALLERY SUBTITLES ─── */
+.gallery-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem; font-weight: 600;
+  color: var(--charcoal);
+  margin: 40px 0 20px;
+}
+.gallery-subtitle:first-of-type { margin-top: 32px; }
+.gallery-subtitle-note {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem; font-weight: 400;
+  color: var(--charcoal-light);
+  display: block; margin-top: 4px;
+}
+
 /* ─── GALLERY EXTRA ─── */
 .gallery-extra {
   display: none;
@@ -447,10 +462,6 @@ footer a { color: var(--gold); text-decoration: none; }
 @media (max-width: 550px) { .gallery-extra { grid-template-columns: 1fr; } }
 
 /* ─── STICKY WHATSAPP (mobile only) ─── */
-@media (max-width: 768px) {
-  .whatsapp-sticky { display: flex; }
-  body { padding-bottom: 60px; }
-}
 .whatsapp-sticky {
   display: none;
   position: fixed;
@@ -471,6 +482,10 @@ footer a { color: var(--gold); text-decoration: none; }
 }
 .whatsapp-sticky svg {
   width: 22px; height: 22px; flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  .whatsapp-sticky { display: flex; }
+  body { padding-bottom: 60px; }
 }
 </style>
 </head>
@@ -567,48 +582,56 @@ footer a { color: var(--gold); text-decoration: none; }
   <div class="container">
     <p class="section-label">Galerie</p>
     <h2 class="section-title">D&eacute;couvrez les lieux</h2>
+
+    <h3 class="gallery-subtitle">Maison</h3>
     <div class="gallery-grid">
-      <img src="photos/813ef747-0f52-4c9d-9ce6-3be89138d9a0.avif" alt="Photo 1" onclick="openLightbox(0)">
-      <img src="photos/f2670819-9976-455c-8939-969f96a1e1e1.avif" alt="Photo 2" onclick="openLightbox(1)">
-      <img src="photos/7de322be-0d29-4a53-b2ad-43a379d9c2ec.avif" alt="Photo 3" onclick="openLightbox(2)">
-      <img src="photos/59e5050e-fec2-40ae-a3f4-cba12121621e.avif" alt="Photo 4" onclick="openLightbox(3)">
-      <img src="photos/9f13eae2-9cea-4faf-860f-1b9334ea525f.avif" alt="Photo 5" onclick="openLightbox(4)">
-      <img src="photos/2b3a16a4-7e39-4939-963c-7ef9e7a11292.avif" alt="Photo 6" onclick="openLightbox(5)">
-      <img src="photos/d220c97e-dc3a-4429-b994-b56a945b9ddf.avif" alt="Photo 7" onclick="openLightbox(6)">
-      <img src="photos/e5a5bc87-aec1-49cc-93fc-26715129e1a7.avif" alt="Photo 8" onclick="openLightbox(7)">
-      <img src="photos/e8357228-a94f-46cd-8b9f-20a14f6153a3.avif" alt="Photo 9" onclick="openLightbox(8)">
-      <img src="photos/c444336f-3b06-4780-b2c6-cc8fd227ba2b.avif" alt="Photo 10" onclick="openLightbox(9)">
+      <img src="photos/maison/IMG-20250929-WA0014~2.jpg" alt="Maison 1" onclick="openLightbox(0)">
+      <img src="photos/maison/PXL_20230306_104601321.MP~2.jpg" alt="Maison 2" onclick="openLightbox(1)">
+      <img src="photos/maison/PXL_20230306_105146816.MP~2.jpg" alt="Maison 3" onclick="openLightbox(2)">
+      <img src="photos/maison/PXL_20230306_142015998.MP~3.jpg" alt="Maison 4" onclick="openLightbox(3)">
+      <img src="photos/maison/PXL_20230212_092527697.jpg" alt="Maison 5" onclick="openLightbox(4)">
+      <img src="photos/maison/PXL_20230306_110751774.MP~2.jpg" alt="Maison 6" onclick="openLightbox(5)">
+      <img src="photos/maison/PXL_20230306_110438150.MP.jpg" alt="Maison 7" onclick="openLightbox(6)">
+      <img src="photos/maison/PXL_20240405_185307332.jpg" alt="Maison 8" onclick="openLightbox(7)">
+      <img src="photos/maison/PXL_20230306_110240911.MP.jpg" alt="Maison 9" onclick="openLightbox(8)">
+      <img src="photos/maison/PXL_20251028_100742487.jpg" alt="Maison 10" onclick="openLightbox(9)">
     </div>
     <div class="gallery-extra" id="gallery-extra">
-      <img src="photos/aba49747-f4d4-4d9b-bf00-992de7572863.avif" alt="Photo 11" onclick="openLightbox(10)">
-      <img src="photos/d07fc38c-7c14-42b5-a4ef-90f33faf294d.avif" alt="Photo 12" onclick="openLightbox(11)">
-      <img src="photos/e89fede5-1416-4063-8aac-b4dc7962ea59.avif" alt="Photo 13" onclick="openLightbox(12)">
-      <img src="photos/c8b7a1a4-0af1-4ddf-84f7-349d05471006.avif" alt="Photo 14" onclick="openLightbox(13)">
-      <img src="photos/1569c607-e8bc-46ff-b824-6139bd6d7d55.avif" alt="Photo 15" onclick="openLightbox(14)">
-      <img src="photos/3fdd495d-c0a0-4bf5-9eed-4091b7bf6403.avif" alt="Photo 16" onclick="openLightbox(15)">
-      <img src="photos/fbf57360-00fd-4b6d-aafd-43b43d161c8d.avif" alt="Photo 17" onclick="openLightbox(16)">
-      <img src="photos/ae0e09b3-170d-4d4d-a313-549e00a82352.avif" alt="Photo 18" onclick="openLightbox(17)">
-      <img src="photos/8589bd25-63ec-40e2-951c-358849f2d111.avif" alt="Photo 19" onclick="openLightbox(18)">
-      <img src="photos/a67ce694-b150-4731-bbf1-858eec15c6ac.avif" alt="Photo 20" onclick="openLightbox(19)">
-      <img src="photos/e62a6b6a-6b80-429f-81b4-362a75605026.webp" alt="Photo 21" onclick="openLightbox(20)">
-      <img src="photos/fd5b19be-217f-4878-8bac-ef3334b0b312.avif" alt="Photo 22" onclick="openLightbox(21)">
-      <img src="photos/7fc3efb9-75ab-4bb0-86be-ca8c5a917e6b.avif" alt="Photo 23" onclick="openLightbox(22)">
-      <img src="photos/55597e3d-2e6d-4c12-a44c-1069cd3c3e46.avif" alt="Photo 24" onclick="openLightbox(23)">
-      <img src="photos/eb09c026-8f3c-4a3c-a499-47a6582d8f9d.avif" alt="Photo 25" onclick="openLightbox(24)">
-      <img src="photos/ed4b7510-32ad-4a4d-af5f-3f7759354822.avif" alt="Photo 26" onclick="openLightbox(25)">
-      <img src="photos/c22293af-cac6-4473-b954-663c822fca62.avif" alt="Photo 27" onclick="openLightbox(26)">
-      <img src="photos/62fe95e4-bbc7-4874-b2ac-dd454ad33af2.avif" alt="Photo 28" onclick="openLightbox(27)">
-      <img src="photos/83867dc2-c23b-487a-8792-a119320cdaea.avif" alt="Photo 29" onclick="openLightbox(28)">
-      <img src="photos/979c20c2-8608-4c49-b324-1003dfed35bd.avif" alt="Photo 30" onclick="openLightbox(29)">
-      <img src="photos/619992e6-7cd5-4116-9f50-c2073ec94c1e.avif" alt="Photo 31" onclick="openLightbox(30)">
-      <img src="photos/7dd337a5-0c26-4e8c-b31f-2fc91f6b74db.avif" alt="Photo 32" onclick="openLightbox(31)">
-      <img src="photos/d8cd3b17-1080-46a9-996b-c1b96d3f9f3d.avif" alt="Photo 33" onclick="openLightbox(32)">
-      <img src="photos/5383c023-1a93-4626-bb30-3a190a0cccb0.avif" alt="Photo 34" onclick="openLightbox(33)">
+      <img src="photos/maison/PXL_20251028_100816659.jpg" alt="Maison 11" onclick="openLightbox(10)">
+      <img src="photos/maison/PXL_20230306_103636862.MP.jpg" alt="Maison 12" onclick="openLightbox(11)">
+      <img src="photos/maison/PXL_20251028_100529980.jpg" alt="Maison 13" onclick="openLightbox(12)">
+      <img src="photos/maison/PXL_20240405_185128943.jpg" alt="Maison 14" onclick="openLightbox(13)">
+      <img src="photos/maison/PXL_20230306_101504006.MP~2.jpg" alt="Maison 15" onclick="openLightbox(14)">
+      <img src="photos/maison/PXL_20230306_101032405.MP~2.jpg" alt="Maison 16" onclick="openLightbox(15)">
+      <img src="photos/maison/PXL_20230306_070338876.MP~2.jpg" alt="Maison 17" onclick="openLightbox(16)">
+      <img src="photos/maison/PXL_20230306_095721562.MP~2.jpg" alt="Maison 18" onclick="openLightbox(17)">
+      <img src="photos/maison/IMG-20221106-WA0000.jpg" alt="Maison 19" onclick="openLightbox(18)">
+      <img src="photos/maison/IMG-20221111-WA0006.jpg" alt="Maison 20" onclick="openLightbox(19)">
+      <img src="photos/maison/PXL_20230306_100109694.MP~2.jpg" alt="Maison 21" onclick="openLightbox(20)">
+      <img src="photos/maison/PXL_20230602_185755105-EFFECTS.jpg" alt="Maison 22" onclick="openLightbox(21)">
+      <img src="photos/maison/PXL_20230306_072031413.MP~2.jpg" alt="Maison 23" onclick="openLightbox(22)">
+      <img src="photos/maison/PXL_20230212_093720322.MP~3.jpg" alt="Maison 24" onclick="openLightbox(23)">
+      <img src="photos/maison/original_27e47575-0441-494e-ae02-ff37ac5500b8_PXL_20230306_143429664.MP.jpg" alt="Maison 25" onclick="openLightbox(24)">
+      <img src="photos/maison/PXL_20230119_091620761.jpg" alt="Maison 26" onclick="openLightbox(25)">
+      <img src="photos/maison/IMG_20221212_085447.jpg" alt="Maison 27" onclick="openLightbox(26)">
+      <img src="photos/maison/PXL_20230119_084923364.jpg" alt="Maison 28" onclick="openLightbox(27)">
+      <img src="photos/maison/59e5050e-fec2-40ae-a3f4-cba12121621e.avif" alt="Maison 29" onclick="openLightbox(28)">
     </div>
     <div class="gallery-more-wrap">
       <button class="gallery-more-btn" id="gallery-more-btn" onclick="toggleGallery()">
-        Voir les 24 photos restantes
+        Voir les 19 photos restantes
       </button>
+    </div>
+
+    <h3 class="gallery-subtitle">Studio <span class="gallery-subtitle-note">&Agrave; partir de 7 personnes</span></h3>
+    <div class="gallery-grid">
+      <img src="photos/appartement%20annexe/aba49747-f4d4-4d9b-bf00-992de7572863.avif" alt="Studio 1" onclick="openLightbox(29)">
+      <img src="photos/appartement%20annexe/83867dc2-c23b-487a-8792-a119320cdaea.avif" alt="Studio 2" onclick="openLightbox(30)">
+      <img src="photos/appartement%20annexe/979c20c2-8608-4c49-b324-1003dfed35bd.avif" alt="Studio 3" onclick="openLightbox(31)">
+      <img src="photos/appartement%20annexe/619992e6-7cd5-4116-9f50-c2073ec94c1e.avif" alt="Studio 4" onclick="openLightbox(32)">
+      <img src="photos/appartement%20annexe/7dd337a5-0c26-4e8c-b31f-2fc91f6b74db.avif" alt="Studio 5" onclick="openLightbox(33)">
+      <img src="photos/appartement%20annexe/d8cd3b17-1080-46a9-996b-c1b96d3f9f3d.avif" alt="Studio 6" onclick="openLightbox(34)">
+      <img src="photos/appartement%20annexe/5383c023-1a93-4626-bb30-3a190a0cccb0.avif" alt="Studio 7" onclick="openLightbox(35)">
     </div>
   </div>
 </section>
@@ -673,8 +696,8 @@ footer a { color: var(--gold); text-decoration: none; }
           aussi beau que pratique.
         </p>
         <ul class="distances">
-          <li><span>Lac d'Annecy (plage)</span><span>10 min &agrave; pied</span></li>
-          <li><span>Commerces et restaurants</span><span>5-10 min &agrave; pied</span></li>
+          <li><span>Lac d'Annecy</span><span>10 min &agrave; pied</span></li>
+          <li><span>Commerces et restaurants</span><span>2-10 min &agrave; pied</span></li>
           <li><span>Piste cyclable</span><span>Au bout de l'all&eacute;e</span></li>
           <li><span>Annecy centre-ville</span><span>15 min en voiture</span></li>
           <li><span>Annecy via piste cyclable</span><span>9 km le long du lac</span></li>
@@ -780,40 +803,42 @@ footer a { color: var(--gold); text-decoration: none; }
 <script>
 // Gallery lightbox
 const galleryImages = [
-  'photos/813ef747-0f52-4c9d-9ce6-3be89138d9a0.avif',
-  'photos/f2670819-9976-455c-8939-969f96a1e1e1.avif',
-  'photos/7de322be-0d29-4a53-b2ad-43a379d9c2ec.avif',
-  'photos/59e5050e-fec2-40ae-a3f4-cba12121621e.avif',
-  'photos/9f13eae2-9cea-4faf-860f-1b9334ea525f.avif',
-  'photos/2b3a16a4-7e39-4939-963c-7ef9e7a11292.avif',
-  'photos/d220c97e-dc3a-4429-b994-b56a945b9ddf.avif',
-  'photos/e5a5bc87-aec1-49cc-93fc-26715129e1a7.avif',
-  'photos/e8357228-a94f-46cd-8b9f-20a14f6153a3.avif',
-  'photos/c444336f-3b06-4780-b2c6-cc8fd227ba2b.avif',
-  'photos/aba49747-f4d4-4d9b-bf00-992de7572863.avif',
-  'photos/d07fc38c-7c14-42b5-a4ef-90f33faf294d.avif',
-  'photos/e89fede5-1416-4063-8aac-b4dc7962ea59.avif',
-  'photos/c8b7a1a4-0af1-4ddf-84f7-349d05471006.avif',
-  'photos/1569c607-e8bc-46ff-b824-6139bd6d7d55.avif',
-  'photos/3fdd495d-c0a0-4bf5-9eed-4091b7bf6403.avif',
-  'photos/fbf57360-00fd-4b6d-aafd-43b43d161c8d.avif',
-  'photos/ae0e09b3-170d-4d4d-a313-549e00a82352.avif',
-  'photos/8589bd25-63ec-40e2-951c-358849f2d111.avif',
-  'photos/a67ce694-b150-4731-bbf1-858eec15c6ac.avif',
-  'photos/e62a6b6a-6b80-429f-81b4-362a75605026.webp',
-  'photos/fd5b19be-217f-4878-8bac-ef3334b0b312.avif',
-  'photos/7fc3efb9-75ab-4bb0-86be-ca8c5a917e6b.avif',
-  'photos/55597e3d-2e6d-4c12-a44c-1069cd3c3e46.avif',
-  'photos/eb09c026-8f3c-4a3c-a499-47a6582d8f9d.avif',
-  'photos/ed4b7510-32ad-4a4d-af5f-3f7759354822.avif',
-  'photos/c22293af-cac6-4473-b954-663c822fca62.avif',
-  'photos/62fe95e4-bbc7-4874-b2ac-dd454ad33af2.avif',
-  'photos/83867dc2-c23b-487a-8792-a119320cdaea.avif',
-  'photos/979c20c2-8608-4c49-b324-1003dfed35bd.avif',
-  'photos/619992e6-7cd5-4116-9f50-c2073ec94c1e.avif',
-  'photos/7dd337a5-0c26-4e8c-b31f-2fc91f6b74db.avif',
-  'photos/d8cd3b17-1080-46a9-996b-c1b96d3f9f3d.avif',
-  'photos/5383c023-1a93-4626-bb30-3a190a0cccb0.avif'
+  'photos/maison/IMG-20250929-WA0014~2.jpg',
+  'photos/maison/PXL_20230306_104601321.MP~2.jpg',
+  'photos/maison/PXL_20230306_105146816.MP~2.jpg',
+  'photos/maison/PXL_20230306_142015998.MP~3.jpg',
+  'photos/maison/PXL_20230212_092527697.jpg',
+  'photos/maison/PXL_20230306_110751774.MP~2.jpg',
+  'photos/maison/PXL_20230306_110438150.MP.jpg',
+  'photos/maison/PXL_20240405_185307332.jpg',
+  'photos/maison/PXL_20230306_110240911.MP.jpg',
+  'photos/maison/PXL_20251028_100742487.jpg',
+  'photos/maison/PXL_20251028_100816659.jpg',
+  'photos/maison/PXL_20230306_103636862.MP.jpg',
+  'photos/maison/PXL_20251028_100529980.jpg',
+  'photos/maison/PXL_20240405_185128943.jpg',
+  'photos/maison/PXL_20230306_101504006.MP~2.jpg',
+  'photos/maison/PXL_20230306_101032405.MP~2.jpg',
+  'photos/maison/PXL_20230306_070338876.MP~2.jpg',
+  'photos/maison/PXL_20230306_095721562.MP~2.jpg',
+  'photos/maison/IMG-20221106-WA0000.jpg',
+  'photos/maison/IMG-20221111-WA0006.jpg',
+  'photos/maison/PXL_20230306_100109694.MP~2.jpg',
+  'photos/maison/PXL_20230602_185755105-EFFECTS.jpg',
+  'photos/maison/PXL_20230306_072031413.MP~2.jpg',
+  'photos/maison/PXL_20230212_093720322.MP~3.jpg',
+  'photos/maison/original_27e47575-0441-494e-ae02-ff37ac5500b8_PXL_20230306_143429664.MP.jpg',
+  'photos/maison/PXL_20230119_091620761.jpg',
+  'photos/maison/IMG_20221212_085447.jpg',
+  'photos/maison/PXL_20230119_084923364.jpg',
+  'photos/maison/59e5050e-fec2-40ae-a3f4-cba12121621e.avif',
+  'photos/appartement%20annexe/aba49747-f4d4-4d9b-bf00-992de7572863.avif',
+  'photos/appartement%20annexe/83867dc2-c23b-487a-8792-a119320cdaea.avif',
+  'photos/appartement%20annexe/979c20c2-8608-4c49-b324-1003dfed35bd.avif',
+  'photos/appartement%20annexe/619992e6-7cd5-4116-9f50-c2073ec94c1e.avif',
+  'photos/appartement%20annexe/7dd337a5-0c26-4e8c-b31f-2fc91f6b74db.avif',
+  'photos/appartement%20annexe/d8cd3b17-1080-46a9-996b-c1b96d3f9f3d.avif',
+  'photos/appartement%20annexe/5383c023-1a93-4626-bb30-3a190a0cccb0.avif'
 ];
 let currentImg = 0;
 
